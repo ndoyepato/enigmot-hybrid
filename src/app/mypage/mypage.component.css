@@ -1,0 +1,54 @@
+/* Add mobile styles for the component here.  */
+FlexboxLayout {
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height: 100%;
+}
+StackLayout {
+    width: 300;
+    padding: 10 16;
+    background-color: #f0f0f0;
+
+    border-color: #F08796;
+    border-width: 0.5;
+    border-radius: 10;
+}
+
+Image {
+    margin-bottom: 20;
+    width: 100%;
+    /*height: 50;*/
+}
+Button, TextField {
+    margin-bottom: 10;
+}
+.btn-primary {
+    background-color: #F08796;
+    margin-left: 0;
+    margin-right: 0;
+}
+TextField {
+    placeholder-color: #C4AFB4;
+    color: black;
+    text-align: center;
+    border-color: #F08796;
+    border-width: 1;
+    border-radius: 10;
+}
+
+Button{
+    text-transform: none;
+}
+
+Label{
+    text-align: center;
+    font-style: italic;
+    font-size: 25%;
+    font-weight: bold;
+    margin-bottom: 30;
+}
+
+.title{
+    visibility: hidden;
+}

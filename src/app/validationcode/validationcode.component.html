@@ -1,0 +1,32 @@
+<ActionBar title="Wax">
+    <ActionItem tap="onShare"
+                ios.systemIcon="9" ios.position="left"
+                android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+    <ActionItem tap="onDelete"
+                ios.systemIcon="16" ios.position="right"
+                text="option" android.position="popup"></ActionItem>
+</ActionBar>
+<FlexboxLayout>
+    <ScrollView>
+        <StackLayout class="form">
+            <Label text="Validation du code" class="title"></Label>
+            <Label text="Veuillez renseigner le code que nous vous avons envoyé par sms." class="subtitle" textWrap="true"></Label>
+            <ActivityIndicator [busy]="isLoading" color="#F08796" width="50" height="50"></ActivityIndicator>
+            <TextField hint="Code"
+                       keyboardType="number"
+                       autocorrect="false"
+                       autocapitalizationType="none"
+                       [(ngModel)]="user.code"
+                       class="input"
+                       [isEnabled]="isEnabled"></TextField>
+
+            <Button
+                    text="Valider"
+                    class="btn btn-primary"
+                    (tap)="submit()"
+                    [isEnabled]="isEnabled"
+                    #validation></Button>
+            <!--Button [text]="msg"> </Button-->
+        </StackLayout>
+    </ScrollView>
+</FlexboxLayout>

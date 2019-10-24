@@ -1,0 +1,32 @@
+<ActionBar title="Wax">
+    <ActionItem tap="onShare"
+                ios.systemIcon="9" ios.position="left"
+                android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+    <ActionItem tap="onDelete"
+                ios.systemIcon="16" ios.position="right"
+                text="option" android.position="popup"></ActionItem>
+</ActionBar>
+<FlexboxLayout>
+    <ScrollView>
+        <StackLayout class="form">
+            <Image src="res://cover"
+                   stretch="aspectFit" loadMode="async"></Image>
+            <ActivityIndicator [busy]="isLoading" color="#F08796" width="50" height="50"></ActivityIndicator>
+            <TextField hint="Numero de telephone"
+                       keyboardType="number"
+                       autocorrect="false"
+                       autocapitalizationType="none"
+                       [(ngModel)]="user.telephone"
+                       class="input"
+                        [isEnabled]="isEnabled"></TextField>
+
+            <Button
+                    text="Connexion"
+                    class="btn btn-primary"
+                    (tap)="submit()"
+                    [isEnabled]="isEnabled"
+                    #connexion></Button>
+            <!--Button [text]="msg"> </Button-->
+        </StackLayout>
+    </ScrollView>
+</FlexboxLayout>
