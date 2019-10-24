@@ -3,21 +3,21 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import {NativeScriptCommonModule} from "nativescript-angular/common";
-import {MypageComponent} from "~/app/mypage/mypage.component";
-import {MypageRouting} from "~/app/mypage/mypage.routing";
+import {ConnexionComponent} from "~/app/connexion/connexion.component";
+import {ConnexionRouting} from "~/app/connexion/connexion.routing";
 
 @NgModule({
     imports: [
         NativeScriptModule,
         NativeScriptFormsModule,
         NativeScriptCommonModule,
-        MypageRouting
+        ConnexionRouting
     ],
     declarations: [
-        MypageComponent
+        ConnexionComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
 })
-export class MypageModule { }
+export class ConnexionModule { }

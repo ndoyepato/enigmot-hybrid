@@ -7,12 +7,12 @@ import {RouterExtensions} from "nativescript-angular";
 //var Toast = require("nativescript-toast");
 
 @Component({
-    selector: 'ns-mypage',
-    templateUrl: './mypage.component.html',
-    styleUrls: ['./mypage.component.css']
+    selector: 'ns-connexion',
+    templateUrl: './connexion.component.html',
+    styleUrls: ['./connexion.component.css']
 })
 
-export class MypageComponent implements OnInit {
+export class ConnexionComponent implements OnInit {
     user: User;
     isLoading: boolean;
     isEnabled: boolean = true;

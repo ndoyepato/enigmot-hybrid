@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.wax",
+    "id": "com.app.enigmot",
     "tns-android": {
       "version": "6.1.1"
     },

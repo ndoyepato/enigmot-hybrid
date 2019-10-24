@@ -5,7 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
-import { MypageComponent } from './mypage/mypage.component';
+import { ConnexionComponent } from './connexion/mypage.component';
 import {NativeScriptFormsModule} from "nativescript-angular/forms";
 import {NativeScriptCommonModule} from "nativescript-angular/common";
 import { ValidationcodeComponent } from './validationcode/validationcode.component';
@@ -32,7 +32,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
         AppComponent,
         ItemsComponent,
         ItemDetailComponent,
-        MypageComponent,
+        ConnexionComponent,
         ValidationcodeComponent,
         CreateUserComponent
     ],

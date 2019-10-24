@@ -4,15 +4,15 @@ import {Routes} from "@angular/router";
 
 import {ItemsComponent} from "./item/items.component";
 import {ItemDetailComponent} from "./item/item-detail.component";
-import {MypageComponent} from "~/app/mypage/mypage.component";
+import {ConnexionComponent} from "~/app/connexion/connexion.component";
 
 import {NativeScriptFormsModule} from "nativescript-angular/forms"
 import {ValidationcodeComponent} from "~/app/validationcode/validationcode.component";
 import {CreateUserComponent} from "~/app/create-user/create-user.component";
 
 const routes: Routes = [
-    {path: "", redirectTo: "/mypage", pathMatch: "full"},
-    {path: "mypage", component: MypageComponent},
+    {path: "", redirectTo: "/connexion", pathMatch: "full"},
+    {path: "connexion", component: ConnexionComponent},
     {path: "vc/:user", component: CreateUserComponent},
     {path: "items", component: ItemsComponent},
     {path: "item/:id", component: ItemDetailComponent}
