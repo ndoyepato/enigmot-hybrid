@@ -14,25 +14,11 @@ export class UserService {
     constructor(private http: HttpClient) {
     }
 
-    requestAcode(user: User) {
+    login(user: User) {
         return this.http.post(
-            Config.requestAcode,
+            Config.login,
             JSON.stringify({
-                telephone: user.telephone
-            }),
-            {
-                headers: UserService.getCommonHeaders()
-            }
-        )
-    }
-
-    validateCode(user: User) {
-        console.log("Validate code");
-        return this.http.post(
-            Config.verifierCode,
-            JSON.stringify({
-                code: user.code,
-                telephone: user.telephone
+                username: user.username
             }),
             {
                 headers: UserService.getCommonHeaders()

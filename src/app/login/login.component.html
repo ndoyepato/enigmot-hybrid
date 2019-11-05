@@ -1,0 +1,89 @@
+<ActionBar title="Enigmot">
+    <ActionItem tap="onShare"
+                ios.systemIcon="9" ios.position="left"
+                android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+    <ActionItem tap="onDelete"
+                ios.systemIcon="16" ios.position="right"
+                text="option" android.position="popup">
+
+    </ActionItem>
+</ActionBar>
+<FlexboxLayout>
+    <ScrollView>
+        <StackLayout class="form">
+            <Image src="res://logo"
+                   stretch="aspectFit" loadMode="async"></Image>
+            <!--ActivityIndicator [busy]="isLoading" color="#F08796" width="50" height="50"></ActivityIndicator-->
+
+            <TextField
+                    #username_emil
+                    hint="Nom d'utilisateur ou email"
+                    autocorrect="false"
+                    autocapitalizationType="none"
+                    [(ngModel)]="user.username"
+                    class="input"
+                    [isEnabled]="isEnabled"
+                    backgroundColor="#FFFFFF"
+                    padding="0"></TextField>
+
+            <TextField
+                    #email
+                    hint="Votre email"
+                    autocorrect="false"
+                    autocapitalizationType="none"
+                    [(ngModel)]="user.email"
+                    class="input register-input"
+                    [isEnabled]="isEnabled"
+                    backgroundColor="#FFFFFF"
+                    padding="0"></TextField>
+
+            <TextField
+                    #username
+                    hint="Nom d'utilisateur"
+                    autocorrect="false"
+                    autocapitalizationType="none"
+                    [(ngModel)]="user.username"
+                    class="input register-input"
+                    [isEnabled]="isEnabled"
+                    backgroundColor="#FFFFFF"
+                    padding="0"></TextField>
+
+            <TextField hint="Mot de passe"
+                       autocorrect="false"
+                       autocapitalizationType="none"
+                       secure="true"
+                       [(ngModel)]="user.password"
+                       class="input"
+                       [isEnabled]="isEnabled"
+                       backgroundColor="#FFFFFF"
+                       padding="0"></TextField>
+
+            <CheckBox:CheckBox text="CheckBox Label" checked="false" />
+
+            <Button
+                    #connexion
+                    text="Connexion"
+                    class="btn btn-primary"
+                    (tap)="submit()"
+                    [isEnabled]="isEnabled"></Button>
+            <Label
+                    #qst
+                    text="Vous n'avez pas de compte?"></Label>
+            <Button
+                    #inscription
+                    text="S'nscription"
+                    class="btn btn-primary btn-inscrition"
+                    (tap)="toggleLogin()"
+                    [isEnabled]="isEnabled"></Button>
+
+            <Label
+                    #initpwd
+                    text="Initialiser mot de passe"
+                    class="txt-link"
+                    (tap)="initPassword()"
+                    [isEnabled]="isEnabled"
+                    [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"></Label>
+            <!--Button [text]="msg"> </Button-->
+        </StackLayout>
+    </ScrollView>
+</FlexboxLayout>

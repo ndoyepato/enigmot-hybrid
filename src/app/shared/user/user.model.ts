@@ -1,11 +1,12 @@
 export class User {
-    name: string;
+    prenom: string;
+    nom: string;
+    username: string;
     email: string;
-    telephone: string;
     password: string;
     code: string;
 
-    constructor(userStr?: string){
+    constructor() {
 
     }
 }

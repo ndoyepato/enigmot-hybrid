@@ -1,8 +1,8 @@
 import { getString, setString } from "tns-core-modules/application-settings";
 
 export class Config {
-    private static baseUrl = "https://tailleur.xeuweul.com/api";
-    static requestAcode = Config.baseUrl + "/register";
+    private static baseUrl = "https://enigmot.net/api";
+    static login = Config.baseUrl + "/login";
     static verifierCode = Config.baseUrl + "/verification";
     static putUser = Config.baseUrl + "/users_update";
     static userDetails = Config.baseUrl + "/details";
