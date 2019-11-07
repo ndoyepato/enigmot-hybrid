@@ -1,54 +1,94 @@
-<ActionBar title="Enigmot">
-    <ActionItem tap="onShare"
-                ios.systemIcon="9" ios.position="left"
-                android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
-    <ActionItem tap="onDelete"
-                ios.systemIcon="16" ios.position="right"
-                text="option" android.position="popup">
-
-    </ActionItem>
+<ActionBar title=" Enigmot">
+    <ActionItem tap="onMessage"
+                ios.position="right"
+                icon="res://message" android.position="actionBar"></ActionItem>
 </ActionBar>
-<BottomNavigation selectedIndex="0">
+<BottomNavigation selectedIndex="0" (selectedIndexChanged)="onIndexChanged()" #tab>
 
     <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
     <TabStrip>
-        <TabStripItem>
-            <Label text="Home"></Label>
+        <TabStripItem class="tabstripitem" color="{{ selectedIndex0 ? '#8b008b' : 'darkgray' }}">
+            <Label text="Accueil"></Label>
             <Image src="font://&#xf015;" class="fas t-36"></Image>
         </TabStripItem>
-        <TabStripItem class="special">
-            <Label text="Account"></Label>
-            <Image src="font://&#xf007;" class="fas t-36"></Image>
+        <TabStripItem class="tabstripitem" color="{{ selectedIndex1 ? '#8b008b' : 'darkgray' }}">
+            <Label text="Non résolu"></Label>
+            <Image src="font://&#xf11b;" class="fas t-36"></Image>
         </TabStripItem>
-        <TabStripItem class="special">
-            <Label text="Search"></Label>
-            <Image src="font://&#xf00e;" class="fas t-36"></Image>
+        <TabStripItem class="tabstripitem" color="{{ selectedIndex2 ? '#8b008b' : 'darkgray' }}">
+            <Label text="Publier"></Label>
+            <Image src="font://&#xf055;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="tabstripitem" color="{{ selectedIndex3 ? '#8b008b' : 'darkgray' }}">
+            <Label text="Recherche"></Label>
+            <Image src="font://&#xf002;" class="fas t-36"></Image>
         </TabStripItem>
     </TabStrip>
 
     <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
-    <TabContentItem>
+    <TabContentItem class="first-tabcontent">
         <ScrollView>
             <StackLayout>
                 <Image src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                        class="img-enigme"></Image>
                 <Label text="Voici le guide l'énigme en question" class="text-center"></Label>
-                <StackLayout orientation="horizontal">
-                    <Image row="0" col="0" src="font://&#xf00e;" class="fas t-36" width="10"></Image>
+                <StackLayout orientation="horizontal" class="icon-list">
+                    <Button text="Jouer" class="btn btn-jouer" padding="0"></Button>
+                    <Image src="font://&#xf004;" class="far t-36"></Image>
+                    <FlexboxLayout width="100%">
+                        <StackLayout orientation="vertical">
+                            <Label text="Jouée par 3 personne(s)"></Label>
+                            <Label text="Trouvée par 3 personne(s)"></Label>
+                        </StackLayout>
+                    </FlexboxLayout>
                 </StackLayout>
-                <Image src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Image>
-                <Image src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Image>
+
+                <Image src="https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                       class="img-enigme"></Image>
+                <Label text="Voici le guide l'énigme en question" class="text-center"></Label>
+                <StackLayout orientation="horizontal" class="icon-list">
+                    <Button text="Jouer" class="btn btn-jouer" padding="0"></Button>
+                    <Image src="font://&#xf004;" class="far t-36"></Image>
+                    <FlexboxLayout width="100%">
+                        <StackLayout orientation="vertical">
+                            <Label text="Jouée par 3 personne(s)"></Label>
+                            <Label text="Trouvée par 3 personne(s)"></Label>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </StackLayout>
+
+                <Image src="https://images.pexels.com/photos/2832061/pexels-photo-2832061.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                       class="img-enigme"></Image>
+                <Label text="Voici le guide l'énigme en question" class="text-center"></Label>
+                <StackLayout orientation="horizontal" class="icon-list">
+                    <Button text="Jouer" class="btn btn-jouer" padding="0"></Button>
+                    <Image src="font://&#xf004;" class="far t-36"></Image>
+                    <FlexboxLayout width="100%">
+                        <StackLayout orientation="vertical">
+                            <Label text="Jouée par 3 personne(s)"></Label>
+                            <Label text="Trouvée par 3 personne(s)"></Label>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </TabContentItem>
-    <TabContentItem>
+
+    <TabContentItem class="second-tabcontent">
         <GridLayout>
-            <Label text="Account Page" class="h2 text-center"></Label>
+            <Label text="Non Trouvée" class="h2 text-center"></Label>
         </GridLayout>
     </TabContentItem>
-    <TabContentItem>
+
+    <TabContentItem class="third-tabcontent">
         <GridLayout>
-            <Label text="Search Page" class="h2 text-center"></Label>
+            <Label text="Publier" class="h2 text-center"></Label>
+        </GridLayout>
+    </TabContentItem>
+
+    <TabContentItem class="third-tabcontent">
+        <GridLayout>
+            <Label text="Rechercher" class="h2 text-center"></Label>
         </GridLayout>
     </TabContentItem>
 

@@ -1,24 +1,30 @@
 /* Add mobile styles for the component here.  */
 
+FlexboxLayout{
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 5;
+}
+
 TabStripItem.tabstripitem {
-    background-color: teal;
+    background-color: #FFFFFF;
+    color: darkgray;
 }
 
 TabStripItem.tabstripitem:active {
-    background-color: yellowgreen;
+
 }
 
 TabContentItem.first-tabcontent {
-    background-color: seashell;
-    color: olive;
 }
 TabContentItem.second-tabcontent {
-    background-color: slategray;
-    color: aquamarine;
 }
 TabContentItem.third-tabcontent {
-    background-color: blueviolet;
-    color: antiquewhite;
+}
+
+.far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
 }
 
 .fas {
@@ -32,4 +38,25 @@ TabContentItem.third-tabcontent {
 
 .img-enigme{
     margin-bottom: 5;
+}
+
+.icon-list{
+    padding: 5;
+}
+
+.icon-list Image{
+    margin: 2;
+    width: 30;
+    color: darkmagenta;
+}
+
+.btn-jouer{
+    color: #FFFFFF;
+    background-color: darkmagenta;
+    text-transform: none;
+    border-radius: 10;
+    margin-left: 0;
+    margin-right: 5;
+    height: 30;
+    font-weight: bold;
 }
